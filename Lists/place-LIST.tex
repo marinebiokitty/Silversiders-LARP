@@ -1,0 +1,93 @@
+%%%%%
+%%
+%% This file sets up the Place datatype and creates Place macros.
+%% Places correspond to general units of game that are not characters.
+%% Generally, game elements that do not come in some character's
+%% packet are owned by places.  A Place macro may contain zero or more
+%% of any kind of element (most likely Sign and Item macros).
+%%
+%% The simplest case is a single Place macro, \pWorld{}, which
+%% contains all miscellaneous game elements not owned by a character.
+%% However, Place macros are a good way to sort game area by general
+%% location or similar.  Place may also be used as a base for more
+%% complex and specific subtypes.
+%%
+%% Places do not necessarily correspond to only locations; you could
+%% set up a series of Place macros that each represent a time period
+%% in which certain elements are to be introduced into game.
+%%
+%%%%%
+
+\errorcontextlines=10
+
+\DECLARESUBTYPE{Place}{Owner}
+\PRESETS{Place}{
+  \FD\MYwhere	{} %% if a Place is a single identifiable location
+  \FD\MYwhen	{} %% if a Place is time-based
+  }
+\POSTSETS{Place}{
+  \edef\mylocation{\MYwhere}
+  \protected@edef\@ownerstring{%
+    \MYname%
+    \ifx\mylocation\empty\else\ (\mylocation)\fi%
+    \ifx\MYwhen\empty\else\ (\MYwhen)\fi%
+    }
+  }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\NEW{Place}{\pTest}{
+%  \s\MYname	{Test Place}
+%  \s\MYsigns	{\sTest{}}
+%  \s\MYitems	{\iTest{}\iWhatzit{}}
+%  }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+%%%Macros for Geographical places%%%%
+
+\NEW{Place}{\pFarm}{ %Name of the ``Farmer'' country
+  \s\MYname	{Children of the Sun}
+}
+
+\NEW{Place}{\pFarmers}{ %People who live in the ``Children of the Sun'' country
+  \s\MYname	{Children of the Sun}
+}
+
+\NEW{Place}{\pTech}{ %Name of the ``Technocracy'' country
+  \s\MYname	{The Free People's Federation}
+}
+
+\NEW{Place}{\pTechies}{ %People who live in the ``Technocracy'' country
+  \s\MYname	{Free People}
+}
+
+\NEW{Place}{\pShip}{ %Name of the ``Viking'' country
+  \s\MYname	{Vikings}
+}
+
+\NEW{Place}{\pShippies}{ %People who live in the ``Viking'' country
+  \s\MYname	{Wave Riders}
+}
+
+\NEW{Place}{\pIsolation}{ %Time Vikings have been Isolationist
+  \s\MYname	{six years}
+}
+
+\NEW{Place}{\pGoat}{ %Genesis religion
+  \s\MYname	{Genesis Religion}
+}
+
+\NEW{Place}{\pGoaties}{ %People who follow the ``Genesis'' religion
+  \s\MYname	{Followers of Genesis}
+}
+
+\NEW{Place}{\pSchool}{ %Name of the Mage School
+  \s\MYname	{Academy}
+}

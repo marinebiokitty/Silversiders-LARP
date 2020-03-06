@@ -1,0 +1,15 @@
+LaTeX/Game_path.cls.tex
+Silversiders_path.cls
+*.aux
+*.pdf
+*.gz
+*.log
+*.sty~
+*.cls~
+*.gz(busy)
+*.toc
+*.fls
+*.dvi
+*.tex~
+*latexmk
+
