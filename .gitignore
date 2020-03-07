@@ -12,4 +12,5 @@ Silversiders_path.cls
 *.dvi
 *.tex~
 *latexmk
-
+LaTeX/Game_path.cls.tex
+LaTeX/Game_path.cls

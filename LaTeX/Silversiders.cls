@@ -38,7 +38,7 @@
 %%
 %% Basic custom game information; gets used everywhere.  Don't put
 %% linebreaks in these and keep their lengths reasonable.
-\def\gamename{NEEDS A NAME}
+\def\gamename{Silversiders}
 \def\gamedate{NEEDS A DATE}
 
 
@@ -50,7 +50,7 @@
 %% writing, \Final specifies that any \TODO commands remaining in the
 %% text of the game will not typeset any todo info (they will still
 %% output info to the terminal).
-\def\gamedraft{\Final}
+\def\gamedraft{\Draft}
 
 
 %%%%%
