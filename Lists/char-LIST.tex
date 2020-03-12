@@ -69,7 +69,7 @@
   \newstat\MYcr	{Combat Rating}{CR}{2} %% for DarkWater-style combat
   %\newstat\MYhp	{Hitpoints}{HP}{10} % Hitpoints
 
-  \FD\MYsex	{\male} %% \male, \female, \neuter, \ambiguous
+  \FD\MYsex	{\male} %% \male, \female, \nonbinary, \ambiguous
   \FD\MYrole	{} %% playerlist role
   \FD\MYgroupstr{} %% playerlist groupstring
   \FD\MYfile	{} %% character sheet filename (including .tex)
@@ -504,11 +504,11 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\NEW{NPC}{\cNPC}{
-  \s\MYname	{Test NPC}
+\NEW{NPC}{\cLoyalty}{
+  \s\MYname	{Loyalty}
   \s\MYnumber	{00000}
-  \s\MYdesc	{a test}
-  \s\MYsex	{\male}
+  \s\MYdesc	{An old humanity girl in a golden dress.}
+  \s\MYsex	{\female}
 }
 
 \NEW{NPC}{\cSomeGuy}{
