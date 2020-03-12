@@ -51,7 +51,7 @@
 %% Basic DarkWater-style Martial Attack abilities
 
 
-%% Everyone has these 3
+%% Everyone has these 4
 \NEW{Abil}{\aAssist}{
   \s\MYname	{Assist}
   \s\MYtext	{You can assist someone else's attack.  You must be
@@ -75,21 +75,7 @@
 		your CR.}
   \s\MYeffect	{I wound you.}
   }
-
-
-%% the \basecombat macro can be prepended to the Char abils list
-%% (in char-LIST.tex)
-\def\basecombat{\aKnockOut{}\aWound{}\aAssist{}}
-
-%% only some people have these
-\NEW{Abil}{\aDisarm}{
-  \s\MYname	{Disarm}
-  \s\MYtext	{You can disarm one item from someone as an attack.  Say
-		``\MYname'' and your CR.  Point at the item you want to
-		disarm.  If the attack works, they must drop that item.}
-  \s\MYeffect	{I disarm that item.}
-  }
-
+  
 \NEW{Abil}{\aRestrain}{
   \s\MYname	{Restrain}
   \s\MYtext	{You can restrain someone as an attack.  Say ``\MYname''
@@ -100,11 +86,285 @@
   \s\MYeffect	{I restrain you.  You are restrained until I incant
 		``release.''}
   }
+
+
+%% the \basecombat macro can be prepended to the Char abils list
+%% (in char-LIST.tex)
+\def\basecombat{\aKnockOut{}\aWound{}\aAssist{}\aRestrain{}}
+
+%% only some people have these
+
+\NEW{Abil}{\aHypnosis}{
+  \s\MYname	{Ocular Hypnosis}
+  \s\MYtext	{You can hypnotize another person if you are able to meet their eyes. A hypnotized individual must do your bidding for five minutes. They will remember this when the hypnosis wears off.}
+  \s\MYeffect	{I hypnotize you with my eyes. You must do as I say for the next five minutes. You will remember this when the hypnosis wears off.}
+  }
+
+\NEW{Abil}{\aPowerfulHypnosis}{
+  \s\MYname	{Powerful Ocular Hypnosis}
+  \s\MYtext	{You can hypnotize another person if you are able to meet their eyes. A hypnotized individual must do your bidding for five minutes. They will NOT remember this when the hypnosis wears off.}
+  \s\MYeffect	{I hypnotize you with my eyes. You must do as I say for the next five minutes. You will NOT remember this when the hypnosis wears off.}
+  }
+
+\NEW{Abil}{\aGills}{
+  \s\MYname	{Water Breathing}
+  \s\MYtext	{You can breathe under water.}
+  \s\MYeffect	{I can breathe under water.}
+  }
+  
+\NEW{Abil}{\aGlow}{
+  \s\MYname	{Glowing Skin}
+  \s\MYtext	{You can light up dark spaces with bioluminescent skin.}
+  \s\MYeffect	{My skin glows brightly.}
+  }
+ 
+ \NEW{Abil}{\aJumpGlide}{
+  \s\MYname	{Jump Glide}
+  \s\MYtext	{You can jump high and glide to a rest as long as there is aetheric energy in the air. There is always aetheric energy in the air unless it has been mechanically removed.}
+  \s\MYeffect	{I can jump high and glide to a rest.}
+  }
+
+\NEW{Abil}{\aFlight}{
+  \s\MYname	{Flight}
+  \s\MYtext	{I can fly if there is aetheric energy in the air. There is always aetheric energy in the air unless it has been mechanically removed.}
+  \s\MYeffect	{I can fly.}
+  } 
+
+\NEW{Abil}{\aSmash}{
+  \s\MYname	{Smash}
+  \s\MYtext	{You can destroy any object with your bare hands unless is is marked as indestructible. 3 uses per game.}
+  \s\MYeffect	{I smash the object.}
+  }
+
+\NEW{Abil}{\aWither}{
+  \s\MYname	{Wither}
+  \s\MYtext	{You can temporarily reduce an individual's CR to 1. Usable 3 times per game.}
+  \s\MYeffect	{You feel yourself weaken. Your CR is 1 for the next ten minutes.}
+  }
+  
+ \NEW{Abil}{\aDeathGlare}{
+  \s\MYname	{Death Glare}
+  \s\MYtext	{You can bring any individual to a wounded state regardless of their CR. Usable twice per game.}
+  \s\MYeffect	{My gaze is like fire. I wound you. You cannot resist.}
+  }
+  
+\NEW{Abil}{\aDishearten}{
+  \s\MYname	{Dishearten}
+  \s\MYtext	{You can temporarily reduce an individual's CR to 1. Usable 3 times per game.}
+  \s\MYeffect	{You feel your sense of self-preservation disappear. You have no will to defend yourself and cannot use abilities for the next ten minutes. Your CR is now 1.}
+  }
+
+\NEW{Abil}{\aHearten}{
+  \s\MYname	{Hearten}
+  \s\MYtext	{You can counteract any ability that reduces CR/causes weakness in yourself or another person. 10 minute cooldown.}
+  \s\MYeffect	{You feel yourself come out of the fog and return to normal.}
+  }
+
+\NEW{Abil}{\aRageGaze}{
+  \s\MYname	{Rage Gaze}
+  \s\MYtext	{You can cause an individual you make eye contact with to immediately attack the nearest person that isn't you. Usable twice per game.}
+  \s\MYeffect	{My gaze brings rage to your heart. You must immediately attack the nearest person who isn't me.}
+  }
+
+\NEW{Abil}{\aBerzerker}{
+  \s\MYname	{Berzerker Frenzy}
+  \s\MYtext	{You can double your CR for one attack. Usable twice per game.}
+  \s\MYeffect	{I get a wild look in my eyes. I attack with double my strength.}
+  }
+
+\NEW{Abil}{\aHeartEyes}{
+  \s\MYname	{Heart Eyes}
+  \s\MYtext	{You can make someone you make eye contact with fall in love with another person for ten minutes. 30 minute cooldown.}
+  \s\MYeffect	{You feel butterflies in your stomach. You fall in love with the person I mention for the next 10 minutes.}
+  }
+  
+\NEW{Abil}{\aRomanceImmunity}{
+  \s\MYname	{Romance Immunity}
+  \s\MYtext	{You are immune to attempts to make you fall in love.}
+  \s\MYeffect	{I'm aromantic and cannot be infatuated.}
+  }
+
+\NEW{Abil}{\aTruth}{
+  \s\MYname	{Truth}
+  \s\MYtext	{You can make someone respond truthfully to a single question. 30 minute cooldown.}
+  \s\MYeffect	{You feel compelled to answer truthfully to my question.}
+  }
+
+\NEW{Abil}{\aRealityWarp}{
+  \s\MYname	{Reality Warp}
+  \s\MYtext	{You can bypass the rules on a location sign or object. 1 hour cooldown unless you know otherwise.}
+  \s\MYeffect	{Reality shifts around me. I can do the impossible.}
+  }
+
+\NEW{Abil}{\aSilverTongue}{
+  \s\MYname	{Silver Tongue}
+  \s\MYtext	{You can can spin an argument that is guaranteed to convince them of a position or take an action. Usable twice per game.}
+  \s\MYeffect	{I am very convincing. You must take my side in an argument or take the action I suggest.}
+  }
+
+\NEW{Abil}{\aWiseWords}{
+  \s\MYname	{Wise Words}
+  \s\MYtext	{You can dispense sage advice that increases the CR of all within ZoC of you by 1 for 5 minutes. 30 minute cooldown.}
+  \s\MYeffect	{My words of wisdom enlighten you. Your CR is +1 for 5 minutes.}
+  }
+
+\NEW{Abil}{\aAppeal}{
+  \s\MYname	{Appeal to Culture}
+  \s\MYtext	{You can convince a fellow Bulb to take your side in an argument when it favors Bulbs. Usable 3 times per game.}
+  \s\MYeffect	{I appeal to you as a fellow Bulb. You must take my side in this argument when it favors Bulbs.}
+  }
+
+\NEW{Abil}{\aHeal}{
+  \s\MYname	{Healing}
+  \s\MYtext	{You can heal someone from a wounded state.}
+  \s\MYeffect	{I heal your wounds with glowing hands.}
+  }
+  
+  \NEW{Abil}{\aWake}{
+  \s\MYname	{Awakening}
+  \s\MYtext	{You can awaken someone from a knocked out state.}
+  \s\MYeffect	{I wake you up with glowing hands.}
+  }
+  
+\NEW{Abil}{\aFirstAid}{
+  \s\MYname	{First Aid}
+  \s\MYtext	{You can heal someone from a wounded state.}
+  \s\MYeffect	{I use my first aid skills to tend your wounds. You are no longer wounded.}
+  }
+
+\NEW{Abil}{\aFix}{
+  \s\MYname	{Fix}
+  \s\MYtext	{You can fix a broken object within a minute of it breaking.}
+  \s\MYeffect	{I cleverly fix the broken object.}
+  }
+
+\NEW{Abil}{\aTech}{
+  \s\MYname	{Tech Wizardry}
+  \s\MYtext	{You can bypass the time requirement to build a mechanical device.}
+  \s\MYeffect	{I somehow manage to get the device built and working almost immediately.}
+  }
+
+\NEW{Abil}{\aInvisibility}{
+  \s\MYname	{Invisibility}
+  \s\MYtext	{You can become invisible for up to ten minutes. Go Not Here when you use this.}
+  \s\MYeffect	{I disappear.}
+  }  
+  
+\NEW{Abil}{\aIllusion}{
+  \s\MYname	{Illusion}
+  \s\MYtext	{You can make one person see something that isn't there. 10 minute cooldown.}
+  \s\MYeffect	{You see exactly what I describe.}
+  }
+
+\NEW{Abil}{\aShiny}{
+  \s\MYname	{Shiny Shiny}
+  \s\MYtext	{You can make one person obsess over something or someone for 5 minutes. 10 minute cooldown.}
+  \s\MYeffect	{You obsess over what I say for the next 10 minutes.}
+  }
+
+\NEW{Abil}{\aPowerfulIllusion}{
+  \s\MYname	{Powerful Illusion}
+  \s\MYtext	{You can make everyone in a room see something that isn't there. Usable twice per game.}
+  \s\MYeffect	{You all see exactly what I describe.}
+  }
+
+\NEW{Abil}{\aDisarm}{
+  \s\MYname	{Disarm}
+  \s\MYtext	{You can disarm one item from someone as an attack.  Say
+		``\MYname'' and your CR.  Point at the item you want to
+		disarm.  If the attack works, they must drop that item.}
+  \s\MYeffect	{I disarm that item.}
+  }
+
+\NEW{Abil}{\aShadyDisarm}{
+  \s\MYname	{Shady Disarm}
+  \s\MYtext	{You can disarm one item from someone without their awareness. They must drop that item. 10 minute cooldown.}
+  \s\MYeffect	{I disarm that item without you noticing. You cannot resist.}
+  }
+  
+\NEW{Abil}{\aLaughAttack}{
+  \s\MYname	{Laugh Attack}
+  \s\MYtext	{You can make someone laugh uncontrollably for a minute. 10 minute cooldown.}
+  \s\MYeffect	{You begin to laugh uncontrollably for a minute.}
+  }
+
+\NEW{Abil}{\aJusticeHunger}{
+  \s\MYname	{Hunger for Justice}
+  \s\MYtext	{You can make someone attack in favor of a cause they have admitted to you. 3 uses per game.}
+  \s\MYeffect	{You feel hungry for justice. Attack the person I tell you if it supports a belief you have admitted to me.}
+  }
+
+\NEW{Abil}{\aFleshHunger}{
+  \s\MYname	{Hunger for Flesh}
+  \s\MYtext	{You can make someone hunger for flesh and attempt to wound all but yourself and those you command them to not harm. One use per game.}
+  \s\MYeffect	{You feel an all-encompassing hunger for flesh for the next ten minutes. Attempt to wound all but me and those I direct you not to harm.}
+  }
+
+\NEW{Abil}{\aPlague}{
+  \s\MYname	{Plague}
+  \s\MYtext	{You can infect a person with a weakening plague. Their CR is reduced to 1 for 10 minutes unless healed. Anyone the infected person interacts with contracts the plague unless immune. Tell them to open their P Envelope. One use per game.}
+  \s\MYeffect	{You contract the plague. Your CR is reduced to 1. Roleplay sickness. You have a strange desire to spread your illness.}
+  }
+  
+\NEW{Abil}{\aImmunity}{
+  \s\MYname	{Immunity}
+  \s\MYtext	{You are immune to infectious diseases.}
+  \s\MYeffect	{I am immune to infectious diseases.}
+  }
+
+\NEW{Abil}{\aClairvoyance}{
+  \s\MYname	{Clairvoyance}
+  \s\MYtext	{You can learn something about a person by speaking with them for 2 minutes. Open the envelope with their name on it. 10 minute cooldown.}
+  \s\MYeffect	{I get a far-off look in my eyes.}
+  }
+
+\NEW{Abil}{\aProphecy}{
+  \s\MYname	{Prophecy}
+  \s\MYtext	{You can open one of your prophecy envelopes. You must speak the words aloud in a monotone voice. 30 minute cooldown.}
+  \s\MYeffect	{I get a far-off look in my eyes and speak in a monotone voice.}
+  }
+
+\NEW{Abil}{\aChannel}{
+  \s\MYname	{Channel the Architect}
+  \s\MYtext	{You can call upon the strength of the Architect. Your CR doubles for one attack, but is -1 for the rest of the game afterwards. You can only use this power if you have at least 2 CR.}
+  \s\MYeffect	{A foreign, strange look passes over my eyes. I attack with double my strength.}
+  }
+
+\NEW{Abil}{\aRousingSpeech}{
+  \s\MYname	{Rousing Speech}
+  \s\MYtext	{You give a rousing pep talk. Roleplay for one minute. Anyone listening agreeing with you has +1 CR for 10 minutes. 30 minute cooldown.}
+  \s\MYeffect	{Your determination rises at my words. Your CR raises +1 for 10 minutes if you agree with me.}
+  }
+
+\NEW{Abil}{\aGuiltTrip}{
+  \s\MYname	{Guilt Trip}
+  \s\MYtext	{You can make anyone feel guilty about something they have done, if they have done it, for 10 minutes. 3 uses per game.}
+  \s\MYeffect	{You feel intensely guilty about the action I point out if you have done it.}
+  }
+  
+\NEW{Abil}{\aMistakenIdentity}{
+  \s\MYname	{Mistaken Identity}
+  \s\MYtext	{You can convince one person that another person you point at, including yourself, is someone else for 10 minutes. Usable twice per game.}
+  \s\MYeffect	{The person I point at is who I say they are. You believe this for ten minutes.}
+  }
+
+\NEW{Abil}{\aFalseIdentity}{
+  \s\MYname	{False Identity}
+  \s\MYtext	{You can convince anyone that you are who you say you are for 5 minutes. 2 uses per game.}
+  \s\MYeffect	{I am who I tell you I am. You believe this for 5 minutes.}
+  }
+
+\NEW{Abil}{\aBackstab}{
+  \s\MYname	{Backstab}
+  \s\MYtext	{You can immediately knock out a person who has admitted something to you in confidence. They won't remember. 3 uses per game.}
+  \s\MYeffect	{You are knocked out. You cannot resist, and will not remember when you wake up.}
+  }
+
 \NEW{Abil}{\aThrow}{
   \s\MYname	{Throw}
-  \s\MYtext	{You can throw someone as an attack.  Say ``\MYname'' and
-		your CR.  Point in the direction you want to throw them.}
-  \s\MYeffect	{I throw you.  Go in the direction I point ten full steps
+  \s\MYtext	{You can throw someone as an attack. Say ``\MYname'' and
+		your CR. Point in the direction you want to throw them.}
+  \s\MYeffect	{I throw you. Go in the direction I point ten full steps
 		or until you hit a wall or similar.}
   }
 
