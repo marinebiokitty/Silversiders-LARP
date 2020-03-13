@@ -51,7 +51,7 @@
 %% Basic DarkWater-style Martial Attack abilities
 
 
-%% Everyone has these 4
+%% Everyone has these 5
 \NEW{Abil}{\aAssist}{
   \s\MYname	{Assist}
   \s\MYtext	{You can assist someone else's attack.  You must be
@@ -87,10 +87,17 @@
 		``release.''}
   }
 
+\NEW{Abil}{\aDisarm}{
+  \s\MYname	{Disarm}
+  \s\MYtext	{You can disarm one item from someone as an attack.  Say
+		``\MYname'' and your CR.  Point at the item you want to
+		disarm.  If the attack works, they must drop that item.}
+  \s\MYeffect	{I disarm that item.}
+  }
 
 %% the \basecombat macro can be prepended to the Char abils list
 %% (in char-LIST.tex)
-\def\basecombat{\aKnockOut{}\aWound{}\aAssist{}\aRestrain{}}
+\def\basecombat{\aKnockOut{}\aWound{}\aAssist{}\aRestrain{}\aDisarm{}}
 
 %% only some people have these
 
@@ -184,6 +191,12 @@
   \s\MYeffect	{I'm cannot be infatuated.}
   }
 
+\NEW{Abil}{\aHistorianInitiate}{
+  \s\MYname	{Initiate into The Historians}
+  \s\MYtext	{You can initiate a new member into The Historians and give them the psychometric ability to read artifacts.}
+  \s\MYeffect	{You are now a member of The Historians. You can read the past of objects and can use Historian notebooks.}
+  }
+
 \NEW{Abil}{\aTruth}{
   \s\MYname	{Truth}
   \s\MYtext	{You can make someone respond truthfully to a single question. 30 minute cooldown.}
@@ -266,14 +279,6 @@
   \s\MYname	{Powerful Illusion}
   \s\MYtext	{You can make everyone in a room see something that isn't there. Usable twice per game.}
   \s\MYeffect	{You all see exactly what I describe.}
-  }
-
-\NEW{Abil}{\aDisarm}{
-  \s\MYname	{Disarm}
-  \s\MYtext	{You can disarm one item from someone as an attack.  Say
-		``\MYname'' and your CR.  Point at the item you want to
-		disarm.  If the attack works, they must drop that item.}
-  \s\MYeffect	{I disarm that item.}
   }
 
 \NEW{Abil}{\aShadyDisarm}{
