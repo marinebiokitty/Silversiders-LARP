@@ -79,6 +79,41 @@
   \s\MYtext	{This is a Test of a fold-n-staple memory packet}
   }
   
+  
+%% The Sword Loyalty and Archetype Objects
+
+\NEW{MemEnvelope}{\mLEnvelope}{
+  \s\MYname	{Open if you try to pick up item 00017}
+  \s\MYtext	{You pick up the sword, and you feel a rush of certainty. You are its Wielder... and something more.}
+  \s\MYgreens	{\gLoyalty{}}
+  }
+
+\NEW{MemFold}{\mLoyalty}{
+  \s\MYname	{Open if you try to pick up item 00017}
+  \s\MYtext	{Unless you are currently its Wielder, your hand passes through the sword. You cannot pick it up.}
+  }
+ 
+ \NEW{MemFold}{\mKEnvelope}{
+  \s\MYname	{Open if you kill another character, every time you kill a character.}
+  \s\MYtext	{You see the one you killed disappear in a flash of light. If it is \cTruth{}, \cDeath{}, \cWar{}, \cFamine{}, \cPestilence{}, \cLove{}, \cBeauty{}, \cHonor{}, \cIngenuity{}, or the character with badge number 00017, open your K packet.}
+  }
+
+ \NEW{MemFold}{\mKPacket}{
+  \s\MYname	{K Packet - Only open if directed}
+  \s\MYtext	{In the place of the person you killed is an object. If you pick it up, you will receive the unique powers of the one you killed as long as you hold it. If anyone takes it from you or you give it up, those powers pass to them.}
+  }
+  
+\NEW{MemFold}{\mWEnvelope}{
+  \s\MYname	{Open if you see another character's death.}
+  \s\MYtext	{You see the one killed disappear in a flash of light. If it is \cTruth{}, \cDeath{}, \cWar{}, \cFamine{}, \cPestilence{}, \cLove{}, \cBeauty{}, \cHonor{}, \cIngenuity{}, or the character with badge number 00017, open your W packet.}
+  }
+
+ \NEW{MemFold}{\mWPacket}{
+  \s\MYname	{W Packet - Only open if directed}
+  \s\MYtext	{In the place of the person you saw killed is an object. If you pick it up, you will receive the unique powers of the one killed as long as you hold it. If anyone takes it from you or you give it up, those powers pass to them.}
+  }
+  
+  
 %% Oracle Packets
 
 \NEW{MemCover}{\mOracleMems}{
@@ -166,6 +201,7 @@
   \s\MYtext	{}
   }
 
+
 %% Famine Ability Envelopes
 
 \NEW{MemEnvelope}{\mGEnvelope}{
@@ -178,70 +214,6 @@
   \s\MYname	{G Envelope - Open if told to do so}
   \s\MYtext	{You feel that you're finally on a path that makes sense to you. You are a hero in this story, and now you have a new ability to match that role.}
   \s\MYabils	{\aJusticeHunger{}}
-  }
-
-%% Ingenuity Past Life Memories
-
-\NEW{MemCover}{\mIngenuityMems}{
-  \s\MYname	{Memories}
-  \s\MYmems	{\mIMemOne{}\mIMemTwo{}\mIMemThree{}\mIMemFour{}\mIMemFive{}}
-  }
-
-\NEW{MemPage}{\mIMemOne}{
-  \s\MYname	{Open when.}
-  \s\MYtext	{}
-  }
-
-\NEW{MemPage}{\mIMemTwo}{
-  \s\MYname	{Open when.}
-  \s\MYtext	{}
-  }
-
-\NEW{MemPage}{\mIMemThree}{
-  \s\MYname	{Open when.}
-  \s\MYtext	{}
-  }
-
-\NEW{MemPage}{\mIMemFour}{
-  \s\MYname	{Open when.}
-  \s\MYtext	{}
-  }
-
-\NEW{MemPage}{\mIMemFive}{
-  \s\MYname	{Open when.}
-  \s\MYtext	{}
-  }
-
-%% Traitor Past Life Memories and Path
-
-\NEW{MemCover}{\mTraitorMems}{
-  \s\MYname	{Memories}
-  \s\MYmems	{\mTMemOne{}\mTMemTwo{}\mTMemThree{}\mTMemFour{}\mTMemFive{}}
-  }
-
-\NEW{MemPage}{\mTMemOne}{
-  \s\MYname	{Open when.}
-  \s\MYtext	{}
-  }
-
-\NEW{MemPage}{\mTMemTwo}{
-  \s\MYname	{Open when.}
-  \s\MYtext	{}
-  }
-
-\NEW{MemPage}{\mTMemThree}{
-  \s\MYname	{Open when.}
-  \s\MYtext	{}
-  }
-
-\NEW{MemPage}{\mTMemFour}{
-  \s\MYname	{Open when.}
-  \s\MYtext	{}
-  }
-
-\NEW{MemPage}{\mTMemFive}{
-  \s\MYname	{Open when.}
-  \s\MYtext	{}
   }
 
 
