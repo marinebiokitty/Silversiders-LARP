@@ -14,3 +14,7 @@ Silversiders_path.cls
 *latexmk
 LaTeX/Game_path.cls.tex
 LaTeX/Game_path.cls
+.DS_Store
+Bluesheets/.DS_Store
+Charsheets/.DS_Store
+Notebooks/.DS_Store
